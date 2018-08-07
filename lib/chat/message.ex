@@ -18,7 +18,7 @@ defmodule Chat.Message do
   end
 
   def get_messages(limit \\ 20) do
-      Chat.Repo.all(Message, limit: limit) #This function accepts a single parameter limit to only return a fixed/maximum number of records.
+      Chat.Repo.all(Chat.Message, limit: limit) #This function accepts a single parameter limit to only return a fixed/maximum number of records.
   end
 
 end
