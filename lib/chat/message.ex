@@ -16,4 +16,9 @@ defmodule Chat.Message do
     |> cast(attrs, [:name, :message])
     |> validate_required([:name, :message])
   end
+
+  def get_messages(limit \\ 20) do
+      Chat.Repo.all(Message, limit: limit) #This function accepts a single parameter limit to only return a fixed/maximum number of records.
+  end
+
 end
