@@ -11,7 +11,8 @@ config :chat,
 
 # Configures the endpoint
 config :chat, ChatWeb.Endpoint,
-  url: [host: "localhost"],
+    url: [scheme: "https", host: "phxlivechat.herokuapp.com", port: 443],
+    force_ssl: [rewrite_on: [:x_forwarded_proto]],
   secret_key_base: "ZFdCXvDLBVX4MQ18yLannUkByo8PucoYSW8CNUpkvWO5hyBX8ZgHfEzLIqaxkDCC",
   render_errors: [view: ChatWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Chat.PubSub,
