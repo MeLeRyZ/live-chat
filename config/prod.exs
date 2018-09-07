@@ -62,7 +62,9 @@ config :logger, level: :info
 config :chat, Chat.Repo,
     adapter: Ecto.Adapters.Postgres,
     url: "${DATABASE_URL}",
-    database: "",
+    database: "fd6f2bf4-1355-42d7-b850-8f4fbdba8ccc",
+    username: "fd6f2bf4-1355-42d7-b850-8f4fbdba8ccc-user",
+    password: "pw-f5c2cb18-3226-4671-a70f-11e340e4a852",
     ssl: true,
     pool_size: 1
 
