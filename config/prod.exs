@@ -69,3 +69,18 @@ config :chat, Chat.Repo,
 # which should be versioned separately.
 
 # import_config "prod.secret.exs"
+
+config :chat, ChatWeb.Endpoint,
+  load_from_system_env: true,
+  url: [host: "example.com", port: 80],
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  server: true,
+  secret_key_base: "${SECRET_KEY_BASE}"
+
+config :chat, Chat.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  url: "${DATABASE_URL}",
+  database: "",
+  ssl: true,
+  pool_size: 1
+  
