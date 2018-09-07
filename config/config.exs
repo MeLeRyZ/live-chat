@@ -11,7 +11,7 @@ config :chat,
 
 # Configures the endpoint
 config :chat, ChatWeb.Endpoint,
-      url: [host: "localhost"],    force_ssl: [rewrite_on: [:x_forwarded_proto]],
+      url: [host: "localhost"],
       secret_key_base: "ZFdCXvDLBVX4MQ18yLannUkByo8PucoYSW8CNUpkvWO5hyBX8ZgHfEzLIqaxkDCC",
       render_errors: [view: LiveChatWeb.ErrorView, accepts: ~w(html json)],
       pubsub: [name: LiveChat.PubSub,
